@@ -1,0 +1,33 @@
+{
+  "process": {
+    "name": "AtHomeVideoStreamer.exe",
+    "wait_interval": 2,
+    "init_delay": 1
+  },
+  "log": {
+    "directory": "d:\\AtHomeVideoStreamer\\log",
+    "pattern": "ich_run_*.log",
+    "backup_paths": [
+      "d:\\AtHomeVideoStreamer\\ich_run_0.log",
+      "c:\\AtHomeVideoStreamer\\log\\ich_run_0.log",
+      "%USERPROFILE%\\Desktop\\ich_run_0.log"
+    ]
+  },
+  "monitor": {
+    "check_interval": 0.2,
+    "file_wait_interval": 3,
+    "notification_cooldown": 3
+  },
+  "notification": {
+    "duration_ms": 5000,
+    "sleep_ms": 6000,
+    "title": "请注意",
+    "startup_title": "监控启动",
+    "startup_message": "等待设备连接..."
+  },
+  "patterns": {
+    "channel_create": "Create Channel PeerCid is (\\d+), ServiceID is \\d+, ChanId\\[(\\d+)\\]",
+    "channel_end": "PeerCid is (\\d+).*?ChanId\\[(\\d+)\\]",
+    "end_keywords": ["TEARDOWN_REQ", "Channel Closed"]
+  }
+}
