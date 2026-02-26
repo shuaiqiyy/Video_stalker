@@ -60,12 +60,7 @@ Windows 10 / Windows 11
 
 Python 3.7+
 
-PowerShell（用于显示系统通知）
-
 ## 注意事项
-权限： 程序需以普通用户权限运行，无需管理员
-
-安全软件： 首次运行可能触发Windows Defender，选择"允许"即可
 
 退出方法： 在任务管理器中结束python.exe进程
 
@@ -76,6 +71,6 @@ PowerShell（用于显示系统通知）
 
 使用glob匹配最新日志文件
 
-使用PowerShell + Windows Forms显示通知
+使用qt显示通知
 
 文件读取采用"打开-读取-关闭"模式，不持有文件句柄
